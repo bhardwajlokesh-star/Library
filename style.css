@@ -1,7 +1,12 @@
-*{
-    background-color: oklch(92.8% 0.006 264.531);
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: oklch(92.8% 0.006 264.531); 
+    font-family: Arial, sans-serif; 
 }
 
 #home-page .Heading h1 {
@@ -116,20 +121,72 @@ menu{
   color: #333;
 }
 
-#book-cards{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 30px;
-
+.card {
+  position: relative;
+  width: 300px;
+  background: #fff8f0;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   padding: 20px;
-  margin-left: 500px;
-  margin-right: 500px;
-
-  border: 1px solid black;
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Merriweather', serif;
+  color: #3e3e3e;
+  overflow: hidden;
 }
 
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.card h1 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #4b2e83;
+}
+
+.card p {
+  font-size: 1rem;
+  margin: 6px 0;
+  color: #555;
+}
+
+.delete {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #fddede;
+  color: #aa0000;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.card:hover .delete {
+  opacity: 1;
+}
+
+.delete:hover {
+  background-color: #ffb3b3;
+  color: #fff;
+}
+
+#book-cards-wrapper {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px; 
+    padding: 20px; 
+    max-width: 1200px; 
+    margin: 20px auto; 
+    border: 2px dashed #a0a0a0; 
+    background-color: #f0f0f0; 
+    border-radius: 10px;
+}
 
 
 
