@@ -4,21 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <div class="library_heading">
-    <h1>
-        Welcome to Library
-    </h1>
-
-   
-        </div>
- <button>Add books to Library</button>
     
+    <div id="home-page">
+        <div class="Heading">
+            <h1>LIBRARY</h1>
+        </div>
 
+        <div class="add-books">
+            <button onclick="document.getElementById('DisplayForm').showModal()" class="add">+ Add Books</button>
+
+              <dialog id="DisplayForm">
+        <form method="dialog" id="bookForm">
+             <h3>Enter Your Book Details </h3>
+
+             <div class="input-group">
+                <input type="text" name="title" id="book-name" required>
+                <label for="book-name">Title</label>
+             </div>
+
+              <div class="input-group">
+                <input type="text" name="author" id="author-name" required>
+                <label for="author-name">Author</label>
+             </div>
+
+              <div class="input-group">
+                <input type="number" name="pages" id="pages" required>
+                <label for="pages">Book Pages</label>
+             </div>
+
+        
+
+
+        <menu>
+            <button type="submit" id="Submit">Submit</button> <br><br>
+            <button type="button" onclick="document.getElementById('DisplayForm').close()">Cancel</button>
+
+        </menu>
+        </form>
+    </dialog>
+        </div>
     </div>
 
+
+
+
+
+
+
+
     
+
+    <script src="index.js"></script>
 </body>
 </html>

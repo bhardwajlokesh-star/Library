@@ -1,0 +1,147 @@
+*{
+    background-color: oklch(92.8% 0.006 264.531);
+    margin: 0;
+    padding: 0;
+}
+
+#home-page .Heading h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    background-color: #fff;
+}
+
+.add-books{
+    display: flex;
+    justify-content: center;
+
+}
+.add{
+    cursor: pointer;
+    margin: 1%;
+    padding: 20px;
+    font-size: large;
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: oklch(92.8% 0.006 264.531);
+}
+
+
+dialog#DisplayForm{
+    padding: 20px ;
+    border: none;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+}
+#bookForm {
+    text-align: center;
+    padding: 10px;
+  
+}
+
+#DisplayForm h3{
+  margin-top: -10px;
+  margin-bottom: 25px;
+  font-size: large;
+  font-weight:600;
+}
+
+
+
+
+#bookForm button[type="submit"] {
+  font-size: large;
+  padding: 5px;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+
+
+#bookForm button[type="button"] {
+  font-size: large;
+  padding: 5px;
+  font-weight: 500;
+  border-radius: 10px;
+
+}
+
+menu{
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: none;
+  outline: none;
+}
+
+.input-group label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0 4px;
+  color: #777;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+  top: -10px;
+  left: 8px;
+  font-size: 12px;
+  color: #333;
+}
+
+#book-cards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+
+  padding: 20px;
+  margin-left: 500px;
+  margin-right: 500px;
+
+  border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
