@@ -72,14 +72,12 @@ function cards(book) {
     deleteButton.textContent = "Delete";
 
      deleteButton.addEventListener('click', () => {
-        // ADD THIS: Apply a visual fade-out effect if desired (via CSS transition)
         card.style.opacity = '0';
         card.style.transform = 'scale(0.8)';
-        card.style.transition = 'opacity 1.5s ease-out, transform 1.5s ease-out'; // Match delay
+        card.style.transition = 'opacity 1.5s ease-out, transform 1.5s ease-out'; 
 
-        // ADD THIS: Use setTimeout to delay the actual removal
         setTimeout(() => {
-            card.remove(); // Removes the card from the DOM
+            card.remove(); 
 
             const bookIdToDelete = parseInt(card.dataset.bookId);
             const updatedBooks = books.filter(b => b.id !== bookIdToDelete);
@@ -89,7 +87,7 @@ function cards(book) {
 
             console.log(`Deleted book with ID: ${bookIdToDelete}`);
             console.log("Updated Library (books array):", books);
-        }, 1500); // 1500 milliseconds = 1.5 seconds delay
+        }, 1500); 
 
     });
     card.appendChild(readStatusButton); 
